@@ -32,10 +32,10 @@ render() {
                   <span className="mr-2">Autres <strong>durées</strong> de test</span>
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
-                  <MDBDropdownItem href="#!">30</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">60</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">120</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">180</MDBDropdownItem>
+                  <MDBDropdownItem onClick={() => this.props.setTime(30)}>30</MDBDropdownItem>
+                  <MDBDropdownItem onClick={() => this.props.setTime(60)}>60</MDBDropdownItem>
+                  <MDBDropdownItem onClick={() => this.props.setTime(120)}>120</MDBDropdownItem>
+                  <MDBDropdownItem onClick={() => this.props.setTime(180)}>180</MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavItem>

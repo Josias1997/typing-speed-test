@@ -1,0 +1,38 @@
+.words {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 26px;
+    height: 100px; 
+    overflow: hidden;
+}
+
+.word {
+    display: inline-flex;
+    margin-left: 4px;
+    color: gray;
+}
+
+.word.active {
+    color: black;
+    font-weight: bold;
+    background: #ccc;
+    padding: 3px;
+}
+.word.correct {
+    color: green;
+    font-weight: bold;
+}
+.word.incorrect {
+    color: red;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    font-size: 26px;
+}

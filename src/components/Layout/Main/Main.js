@@ -204,15 +204,17 @@ const Main = (props) => {
                                     <tbody>
                                     <tr>
                                         <td>Frappes</td>
-                                        <td>({frappesCorrect}|{frappesIncorrect}) {frappesCorrect + frappesIncorrect}</td>
+                                        <td>({frappesCorrect} | <span style={{
+                                            color: 'red',
+                                        }}>{frappesIncorrect}</span>) {frappesCorrect + frappesIncorrect}</td>
                                     </tr>
                                     <tr>
                                         <td>Précision</td>
-                                        <td>{((1 - (frappesIncorrect/(frappesIncorrect + frappesCorrect))) * 100).toFixed(2)} %</td>
+                                        <td><strong>{((1 - (frappesIncorrect/(frappesIncorrect + frappesCorrect))) * 100).toFixed(2)} %</strong></td>
                                     </tr>
                                     <tr>
                                         <td>Mots corrects</td>
-                                        <td>{correctWords}</td>
+                                        <td><strong>{correctWords}</strong></td>
                                     </tr>
                                     <tr>
                                         <td>Mots incorrects</td>

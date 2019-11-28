@@ -40,3 +40,39 @@ export const getRandomWords = () => {
         }
         return words;
 }
+
+export const results = {
+    columns: [
+        {
+            label: 'Score',
+            field: 'score',
+            sort: 'desc',
+        },
+        {
+            label: 'Date',
+            field: 'date',
+        },
+    ],
+    rows: [
+        {
+            score: 45,
+            date: new Date().toDateString(),
+        },
+        {
+            score: 45,
+            date: new Date().toDateString(),
+        },
+        {
+            score: 45,
+            date: new Date().toDateString(),
+        },
+        {
+            score: 45,
+            date: new Date().toDateString(),
+        },
+        {
+            score: 45,
+            date: new Date().toDateString(),
+        }
+    ]
+};

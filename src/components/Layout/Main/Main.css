@@ -23,11 +23,9 @@
 }
 .word.correct {
     color: green;
-    font-weight: bold;
 }
 .word.incorrect {
     color: red;
-    font-weight: bold;
 }
 
 input {
@@ -35,4 +33,20 @@ input {
     border-radius: 2px;
     border: 1px solid #ccc;
     font-size: 26px;
+}
+
+.result {
+    width: 50%;
+    padding: 4px;
+    text-align: left;
+}
+.result tr td {
+    padding: padding;
+    font-size: 25px;
+}
+
+h4 {
+    color: green;
+    font-weight: bold;
+    font-size: 25px;
 }

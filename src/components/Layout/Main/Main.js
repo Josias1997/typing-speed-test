@@ -1,14 +1,14 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import Button from "../../UI/Button/Button";
 import ProgressBar from "../../UI/ProgressBar/ProgressBar";
 import { getRandomWords } from "../../../utilities/getData";
-import { connect } from "react-redux";
 import './Main.css';
+import Table from "../../UI/Table/Table";
 
 const Main = (props) => {
     const defaultDefaultSettings = useRef({
-        default: props.time,
-        timer: props.time
+        default: 60,
+        timer: 60
     });
     const [typedWord, setTypedWord] = useState('');
     const [currentWord, setCurrentWord] = useState(0);
@@ -24,10 +24,6 @@ const Main = (props) => {
     const [wrongWordsIndexes, setWrongWordsIndexes] = useState([]);
     const countdowntimer = useRef(null);
     const countWords = useRef(0);
-
-    useEffect(() => {
-        restart();
-    }, [props.time])
 
     const handleTypedWord = (event) => {
         setTypedWord(event.target.value);
@@ -97,8 +93,8 @@ const Main = (props) => {
         clearInterval(countdowntimer.current);
         setCurrentWord(0);
         defaultDefaultSettings.current = {
-            default: props.time,
-            timer: props.time,
+            default: 60,
+            timer: 60,
         }
         setCountDown(defaultDefaultSettings.current.default);
         setStartedTest(true);
@@ -173,7 +169,9 @@ const Main = (props) => {
                         onChange={handleTypedWord} value={typedWord} onKeyDown={handleKeyPress}
                         />
                     </div>
-                    <Button style={{width: '12%'}} color={"elegant"} icon={"clock"} value={countdown} />
+                    <Button style={{width: '13%'}} 
+                    color={"elegant"} icon={"clock"} 
+                    value={countdown === 60 ? "01:00" : "00:" + (countdown >= 10 ? countdown : "0" + countdown)} />
                     <Button style={{width: '20%'}} click={() => restart()} color={"blue-grey"} icon={"sync"} value={"Recommencer ?"} />
                         
                 </div>
@@ -202,7 +200,7 @@ const Main = (props) => {
                                 padding: '20px 0 20px 60px',
                             }}>
                                 <h4>{Math.ceil((((frappesCorrect + frappesIncorrect) - (wrongWords * 6))) / (defaultDefaultSettings.current.default * 6 / 60))} MPM (mots par minute)</h4>
-                                <table>
+                                <table className="result">
                                     <tbody>
                                     <tr>
                                         <td>Frappes</td>
@@ -238,33 +236,32 @@ const Main = (props) => {
                      : null
                 }
                 <hr />
-                <div className="mt-3" style={{
-                    backgroundColor: '#ff4444',
-                    color: 'white',
-                    borderRadius: '5px',
-                    marginBottom: '20px'
-                }}>
-                    <div style={{
+                {
+                    !finishedTest ? <div className="mt-3" style={{
+                        backgroundColor: '#ff4444',
                         color: 'white',
-                        padding: '5px 0 0 15px',
+                        borderRadius: '5px',
+                        marginBottom: '20px'
                     }}>
-                        Header
-                        <hr/>
-                    </div>
-                    <div style={{
-                            padding: '20px 0 20px 15px' 
+                        <div style={{
+                            color: 'white',
+                            padding: '5px 0 0 15px',
                         }}>
-                        Content
-                    </div>
-                </div>
+                            Header
+                            <hr/>
+                        </div>
+                        <div style={{
+                                padding: '20px 0 20px 15px' 
+                            }}>
+                            Content
+                        </div>
+                    </div> : <Table score={Math.ceil((((frappesCorrect + frappesIncorrect) - (wrongWords * 6))) / (defaultDefaultSettings.current.default * 6 / 60))} 
+                     date={(new Date()).toDateString()}/>
+                }
+                
             </div>
         </div>
     )
 };
-const mapStateToProps = state => {
-    return {
 
-    }
-}
-
-export default connect(mapStateToProps)(Main);
+export default (Main);

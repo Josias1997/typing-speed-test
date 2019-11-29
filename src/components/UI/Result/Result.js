@@ -6,7 +6,7 @@ const Result = ({wpm, frappesCorrect, frappesIncorrect, correctWords, wrongWords
         <div style={{
             width: '65%',
         }}>
-            <div className="background-primary xlarge-text" style={{
+            <div className="background-primary bold-text xlarge-text" style={{
                 padding: '20px 0 20px 15px',
                 borderRadius: '5px 5px 0 0',
             }}>

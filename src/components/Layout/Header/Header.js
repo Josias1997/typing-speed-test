@@ -27,7 +27,7 @@ render() {
                 <button style={{
                   backgroundColor: '#808080',
                   color: 'white',
-                  padding: '15px'
+                  padding: '8px'
                 }}>Retour au site</button>
             </MDBNavItem>
           </MDBNavbarNav>

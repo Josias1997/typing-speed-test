@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import ProgressBar from "../../UI/ProgressBar/ProgressBar";
 import { getRandomWords } from "../../../utilities/getData";
 import './Main.css';
-import Table from "../../UI/Table/Table";
 import Card from "../../UI/Card/Card";
 import Words from "../../UI/Words/Words";
 import Box from "../../UI/Box/Box";
@@ -178,10 +177,6 @@ const Main = (props) => {
                 }
                 <hr />
                 <Card header={"Qu'est ce que le score MPM ?"} />
-                {
-                    finishedTest ? <Table score={Math.ceil((((frappesCorrect + frappesIncorrect) - (wrongWords * 6))) / (defaultDefaultSettings.current.default * 6 / 60))} 
-                    date={(new Date()).toDateString()}/>: null
-                }
                     
             </div>
     )

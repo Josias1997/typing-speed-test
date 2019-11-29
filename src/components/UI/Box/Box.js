@@ -2,7 +2,7 @@ import React from "react";
 
 const Box = ({title}) => {
     return (
-        <div className="background-primary" style={{
+        <div className="background-primary bold-text" style={{
             width: '100%',
             height: '70px',
             borderRadius: '2px',

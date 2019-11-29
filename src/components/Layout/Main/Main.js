@@ -145,7 +145,7 @@ const Main = (props) => {
                 </div>
                 <ProgressBar />
                 <Box title={"Typing Test: Lorem ipsum dolor sit amet, consectetur adipiscing elit."} />
-                <Words words={words} currentWord={currentWord} 
+                <Words typedWord={typedWord} words={words} currentWord={currentWord} 
                     wrongWordsIndexes={wrongWordsIndexes} 
                     correctWordsIndexes={correctWordsIndexes}
                 />

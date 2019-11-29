@@ -27,11 +27,11 @@
 
 .word.active.incorrect {
     color: #ca2121;
-    font-weight: bold;
     background: #e2e2e2;
     padding: 2px 10px;
     border-radius: 5px;
 }
+
 .word.correct {
     color: #20a212;
 }

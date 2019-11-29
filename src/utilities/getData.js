@@ -41,42 +41,6 @@ export const getRandomWords = () => {
         return words;
 }
 
-export const results = {
-    columns: [
-        {
-            label: 'Score',
-            field: 'score',
-            sort: 'desc',
-        },
-        {
-            label: 'Date',
-            field: 'date',
-        },
-    ],
-    rows: [
-        {
-            score: 45,
-            date: new Date().toDateString(),
-        },
-        {
-            score: 45,
-            date: new Date().toDateString(),
-        },
-        {
-            score: 45,
-            date: new Date().toDateString(),
-        },
-        {
-            score: 45,
-            date: new Date().toDateString(),
-        },
-        {
-            score: 45,
-            date: new Date().toDateString(),
-        }
-    ]
-};
-
 const feebackMessages = {
     '0-10': 'Mmmh... Tu peux mieux faire ! (top 90%) 🤒',
     '10-20': 'Mmmh... Tu peux mieux faire ! (top 80%) 🤒',

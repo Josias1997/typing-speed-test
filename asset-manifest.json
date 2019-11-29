@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/typing-speed-test/static/css/main.4c2cf028.chunk.css",
+    "main.css": "/typing-speed-test/static/css/main.a6a369fc.chunk.css",
     "main.js": "/typing-speed-test/static/js/main.42d433ef.chunk.js",
     "main.js.map": "/typing-speed-test/static/js/main.42d433ef.chunk.js.map",
     "runtime-main.js": "/typing-speed-test/static/js/runtime-main.779116fe.js",
@@ -8,14 +8,14 @@
     "static/js/2.70d63026.chunk.js": "/typing-speed-test/static/js/2.70d63026.chunk.js",
     "static/js/2.70d63026.chunk.js.map": "/typing-speed-test/static/js/2.70d63026.chunk.js.map",
     "index.html": "/typing-speed-test/index.html",
-    "precache-manifest.75a4c363d039aed36cb3a913f8f5614c.js": "/typing-speed-test/precache-manifest.75a4c363d039aed36cb3a913f8f5614c.js",
+    "precache-manifest.2f3cfd1b62c2484ca76348878d13535a.js": "/typing-speed-test/precache-manifest.2f3cfd1b62c2484ca76348878d13535a.js",
     "service-worker.js": "/typing-speed-test/service-worker.js",
-    "static/css/main.4c2cf028.chunk.css.map": "/typing-speed-test/static/css/main.4c2cf028.chunk.css.map"
+    "static/css/main.a6a369fc.chunk.css.map": "/typing-speed-test/static/css/main.a6a369fc.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.779116fe.js",
     "static/js/2.70d63026.chunk.js",
-    "static/css/main.4c2cf028.chunk.css",
+    "static/css/main.a6a369fc.chunk.css",
     "static/js/main.42d433ef.chunk.js"
   ]
 }

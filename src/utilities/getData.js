@@ -76,3 +76,55 @@ export const results = {
         }
     ]
 };
+
+const feebackMessages = {
+    '0-10': 'Mmmh... Tu peux mieux faire ! (top 90%) 🤒',
+    '10-20': 'Mmmh... Tu peux mieux faire ! (top 80%) 🤒',
+    '20-30': "Mmmh... Tu peux mieux faire ! (t'op 70%)",
+    '30-40': "Mmmh... Tu peux mieux faire ! (top 60%) 🤒",
+    '40-50': "Pas mal ! Ne t'arrêtes pas en si bon chemin 🏆 (top 50%)",
+    '50-60': "Pas mal ! Ne t'arrêtes pas en si bon chemin 🏆 (top 40%)",
+    '60-70': "Wow, tu as une réelle maîtrise du clavier ! 😋 (top 30%)",
+    '70-80': "Wow, tu as une réelle maîtrise du clavier ! 😋 (top 20%)",
+    '80-90': "Impressionnant, tu figures parmi les joueurs les plus rapide 🥵🔥 (top 10%)",
+    '90-100': "Impressionnant, tu figures parmi les joueurs les plus rapide 🥵🔥 (top 6%)",
+    '100-110': "Impressionnant, tu figures parmi les joueurs les plus rapide 🥵🔥 (top 4%)",
+    '110-120': "Impressionnant, tu figures parmi les joueurs les plus rapide 🥵🔥 (top 3%)",
+    '120-130': "Impressionnant, tu figures parmi les joueurs les plus rapide 🥵🔥 (top 2%)",
+    '130-':    "Impressionnant, tu figures parmi les joueurs les plus rapide 🥵🔥 (top 1%)"
+
+};
+
+export const getFeedBackMessage = wpm => {
+    switch(true) {
+        case wpm >= 0 && wpm < 10:
+            return feebackMessages['0-10'];
+        case wpm >= 10 && wpm < 20:
+            return feebackMessages['10-20'];
+        case wpm >= 20 && wpm < 30:
+            return feebackMessages['20-30'];
+        case wpm >= 30 && wpm < 40:
+            return feebackMessages['30-40'];
+        case wpm >= 40 && wpm < 50:
+            return feebackMessages['40-50'];
+        case wpm >= 50 && wpm < 60:
+            return feebackMessages['50-60'];
+        case wpm >= 60 && wpm < 70:
+            return feebackMessages['60-70'];
+        case wpm >= 70 && wpm < 80:
+            return feebackMessages['70-80'];
+        case wpm >= 80 && wpm < 90:
+            return feebackMessages['80-90'];
+        case wpm >= 90 && wpm < 100:
+            return feebackMessages['90-100'];
+        case wpm >= 100 && wpm < 110:
+            return feebackMessages['100-110'];
+        case wpm >= 110 && wpm < 120:
+            return feebackMessages['110-120'];
+        case wpm >= 120 && wpm < 130:
+            return feebackMessages['120-130'];
+        default:
+            return feebackMessages['130-'];
+    
+    }
+}

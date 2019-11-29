@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavbarToggler, MDBCollapse, MDBBtn } from "mdbreact";
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavbarToggler, MDBCollapse } from "mdbreact";
 
 class NavbarPage extends Component {
 state = {
@@ -12,11 +12,11 @@ toggleCollapse = () => {
 
 render() {
   return (
-      <MDBNavbar color="elegant-color" dark expand="md">
+      <MDBNavbar className="background-primary" expand="md">
           <div className="container">
           <MDBNavbarBrand>
             <a href="/"><img src="images/arckade-logo.png" alt="logo" style={{
-                height: '55px'
+                height: '43px'
 
             }}/></a>
         </MDBNavbarBrand>
@@ -24,7 +24,11 @@ render() {
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
           <MDBNavbarNav right>
             <MDBNavItem>
-                <MDBBtn color="grey">Retour au site</MDBBtn>
+                <button style={{
+                  backgroundColor: '#808080',
+                  color: 'white',
+                  padding: '15px'
+                }}>Retour au site</button>
             </MDBNavItem>
           </MDBNavbarNav>
         </MDBCollapse>

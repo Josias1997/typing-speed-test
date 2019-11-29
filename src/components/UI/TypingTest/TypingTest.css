@@ -1,0 +1,64 @@
+.typing-test {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+#input {
+    width: 73%;
+}
+
+#chronometer {
+    width: 10%
+}
+
+#restart {
+    width: 16%;
+}
+
+@media screen and (max-width: 1200px) {
+    #input {
+        width: 60%;
+    }
+    #chronometer {
+        width: 14%;
+    }
+    #restart {
+        width: 24%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    #input {
+        width: 53%;
+    }
+    #chronometer {
+        width: 14%;
+    }
+    #restart {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .typing-test {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+    }
+    #input {
+        width: 100%;
+    }
+    #chronometer {
+        margin-top: 5px;
+        width: 100%;
+    }
+    #restart {
+        margin-top: 5px;
+        width: 100%;
+    }
+}
+
+
+

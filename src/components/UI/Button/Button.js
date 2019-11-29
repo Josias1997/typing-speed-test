@@ -1,15 +1,14 @@
 import React from "react";
-import {MDBBtn, MDBIcon} from "mdbreact";
 
 const Button = (props) => {
     return (
-        <div style={{
+        <div id={props.containerId} style={{
             ...props.style
         }}>
-           <MDBBtn color={props.color} onClick={props.click} >
-               <MDBIcon className="mr-2" icon={props.icon} />
-               <strong>{props.value}</strong>
-            </MDBBtn>
+           <button id={props.id} className={props.className} onClick={props.click} >
+               <i className={"fas fa-" + props.icon}></i>
+               <strong className="ml-2">{props.value}</strong>
+            </button>
         </div>
     );
 };

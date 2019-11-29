@@ -4,9 +4,12 @@
     width: 100%;
     border: 1px solid black;
     border-radius: 4px;
-    font-size: 26px;
-    height: 100px; 
+    font-size: 35px;
+    height: 180px; 
     overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .word {
@@ -17,22 +20,30 @@
 
 .word.active {
     color: black;
+    background: #e2e2e2;
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+
+.word.active.incorrect {
+    color: #ca2121;
     font-weight: bold;
-    background: #ccc;
-    padding: 3px;
+    background: #e2e2e2;
+    padding: 2px 10px;
+    border-radius: 5px;
 }
 .word.correct {
-    color: green;
+    color: #20a212;
 }
 .word.incorrect {
-    color: red;
+    color: #ca2121;
 }
 
 input {
     width: 100%;
     border-radius: 2px;
-    border: 1px solid #ccc;
-    font-size: 26px;
+    border: 1px solid #e2e2e2;
+    font-size: 35px;
 }
 
 .result {
@@ -46,7 +57,62 @@ input {
 }
 
 h4 {
-    color: green;
+    color: #20a212;
     font-weight: bold;
     font-size: 25px;
+}
+
+.background-primary {
+    background-color: #343a40;
+    color: white;
+    font-weight: bold;
+}
+
+.secondary {
+    background-color: #d4d4d4;
+}
+
+button {
+    padding: 12px;
+    border-radius: 2px;
+    border: none;
+    width: 100%;
+}
+
+.success {
+    color: #20a212;
+}
+
+.danger {
+    color: #ca2121;
+}
+
+.small-text {
+    font-size: 15px;
+}
+
+.medium-text {
+    font-size: 25px;
+}
+.large-text {
+    font-size: 30px;
+}
+
+.xlarge-text {
+    font-size: 35px;
+}
+
+.background-danger {
+    background-color: #df3d49;
+    color: white;
+}
+
+#chrono:hover {
+    background-color: black;
+}
+
+.body-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }

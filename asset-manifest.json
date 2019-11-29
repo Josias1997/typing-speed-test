@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/typing-speed-test/static/css/main.42af3b5c.chunk.css",
-    "main.js": "/typing-speed-test/static/js/main.42d433ef.chunk.js",
-    "main.js.map": "/typing-speed-test/static/js/main.42d433ef.chunk.js.map",
+    "main.js": "/typing-speed-test/static/js/main.e48f3076.chunk.js",
+    "main.js.map": "/typing-speed-test/static/js/main.e48f3076.chunk.js.map",
     "runtime-main.js": "/typing-speed-test/static/js/runtime-main.779116fe.js",
     "runtime-main.js.map": "/typing-speed-test/static/js/runtime-main.779116fe.js.map",
     "static/js/2.70d63026.chunk.js": "/typing-speed-test/static/js/2.70d63026.chunk.js",
     "static/js/2.70d63026.chunk.js.map": "/typing-speed-test/static/js/2.70d63026.chunk.js.map",
     "index.html": "/typing-speed-test/index.html",
-    "precache-manifest.dccae07f7eb2f1caf1e6ee3aa6e06bd5.js": "/typing-speed-test/precache-manifest.dccae07f7eb2f1caf1e6ee3aa6e06bd5.js",
+    "precache-manifest.ee422889c1083c85bdf70a6a3e2aa92e.js": "/typing-speed-test/precache-manifest.ee422889c1083c85bdf70a6a3e2aa92e.js",
     "service-worker.js": "/typing-speed-test/service-worker.js",
     "static/css/main.42af3b5c.chunk.css.map": "/typing-speed-test/static/css/main.42af3b5c.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.779116fe.js",
     "static/js/2.70d63026.chunk.js",
     "static/css/main.42af3b5c.chunk.css",
-    "static/js/main.42d433ef.chunk.js"
+    "static/js/main.e48f3076.chunk.js"
   ]
 }

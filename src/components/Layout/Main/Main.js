@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import ProgressBar from "../../UI/ProgressBar/ProgressBar";
 import { getRandomWords } from "../../../utilities/getData";
 import './Main.css';
@@ -29,6 +29,7 @@ const Main = (props) => {
     const [mask, setMask] = useState(false);
     const countdowntimer = useRef(null);
     const countWords = useRef(0);
+    const wordsRef = useRef([]);
 
     const handleTypedWord = (event) => {
         const value = event.target.value;
@@ -37,6 +38,14 @@ const Main = (props) => {
         }
         
     };
+
+    useEffect(() => {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+    }, []);
+
+    useEffect(() => {
+        wordsRef.current = wordsRef.current.slice(0, words.length);
+    }, [words]);
 
     const finishTest = () => {
         window.clearInterval(countdowntimer.current);
@@ -77,18 +86,16 @@ const Main = (props) => {
         setCurrentWord(current => current + 1);
         countWords.current++;
         setTypedWord("");
-        if (countWords.current >= 13) {
+        if (wordsRef.current[countWords.current].offsetTop > wordsRef.current[countWords.current - 1].offsetTop) {
             setWords(words.slice(countWords.current));
             countWords.current = 0;
             setCurrentWord(countWords.current);
             setCorrectWordsIndexes([]);
             setWrongWordsIndexes([]);
         }
-
     };
 
     const handleKeyPress = event => {
-        console.log(defaultDefaultSettings.current);
         if(startedTest) {
             startTest();
             setStartedTest(false);
@@ -147,6 +154,7 @@ const Main = (props) => {
                 <Words typedWord={typedWord} words={words} currentWord={currentWord} 
                     wrongWordsIndexes={wrongWordsIndexes} 
                     correctWordsIndexes={correctWordsIndexes}
+                    refs={wordsRef}
                 />
                 <TypingTest style={style}
                     finishedTest={finishedTest}
@@ -176,8 +184,17 @@ const Main = (props) => {
                      : null
                 }
                 <hr />
+                <ins className="adsbygoogle"
+                    style={{
+                        display: 'block',
+                    }}
+                    data-ad-client="ca-pub-2512331316053279"
+                    data-ad-slot="8702036196"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true">
+                </ins>
+    
                 <Card header={"Qu'est ce que le score MPM ?"} />
-                    
             </div>
     )
 };

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Words = ({typedWord, words, currentWord, wrongWordsIndexes, correctWordsIndexes}) => {
+const Words = ({refs, typedWord, words, currentWord, wrongWordsIndexes, correctWordsIndexes}) => {
     return (
         <div className="words">
             {
@@ -18,7 +18,7 @@ const Words = ({typedWord, words, currentWord, wrongWordsIndexes, correctWordsIn
                     } else if (correctWordsIndexes.indexOf(index) !== -1) {
                         classes = "word correct";
                     }
-                    return <div key={index} className={classes}>
+                    return <div ref={el => refs.current[index] = el} key={index} className={classes}>
                         {word}
                     </div>
                 })

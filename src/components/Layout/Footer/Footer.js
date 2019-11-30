@@ -3,11 +3,11 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer class="py-5 background-primary" style={{
-            fontWeight: 'none'
+        <footer className="py-5 background-primary" style={{
+            fontWeight: 'none',
         }}>
-        <div class="container">
-          <p class="m-0 text-center text-white"><strong>Arckade.fr</strong> &copy; 2019</p><br/>
+        <div className="container">
+          <p className="m-0 text-center text-white"><strong>Arckade.fr</strong> &copy; 2019</p><br/>
           
             <center>
                 <a href='http://help.arckade.fr/mentions-legales'>

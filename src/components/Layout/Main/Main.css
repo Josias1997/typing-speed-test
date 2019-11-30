@@ -10,11 +10,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    font-family: "Rubik", "Acme", "Hammersmith One", "Merienda", sans-serif;
 }
 
 .word {
-    display: inline-flex;
-    margin-left: 4px;
+    display: inline-block;
+    margin-left: 15px;
     color: gray;
 }
 
@@ -28,7 +29,7 @@
 .word.active.incorrect {
     color: white;
     background: #ca2121;
-    padding: 2px 10px;
+    padding: 0px 10px;
     border-radius: 5px;
 }
 
@@ -46,6 +47,7 @@ input {
     font-size: 35px;
     height: 47.5px;
     padding-left: 20px;
+    font-family: "Rubik", "Acme", "Hammersmith One", "Merienda", sans-serif;
 }
 
 .result {

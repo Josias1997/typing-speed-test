@@ -5,11 +5,18 @@ const Ads = ({style}) => {
         <div style={{
             ...style,
             width: '32%',
-            backgroundColor: 'blue',
             color: 'white',
             justifyContent: 'center'
         }}>
-           <span className="xlarge-text">Publicité</span>
+           <ins className="adsbygoogle"
+                style={{
+                    display: 'block',
+                }}
+                data-ad-client="ca-pub-2512331316053279"
+                data-ad-slot="2519651081"
+                data-ad-format="auto"
+                data-full-width-responsive="true">  
+            </ins>
         </div>
     );
 };
